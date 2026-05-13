@@ -1,0 +1,19 @@
+<div class="container">
+    <h1>Países</h1>
+    <input type="text" name="search" id="search" placeholder="Buscar país..." (input)="onSearch($event)">
+    @if (loading()) {
+        <span>Carregando...</span>
+    }
+    @if (error()) {
+        <span>Erro ao carregar</span>
+    }
+    @for (country of countries(); track country.name.common) {
+        <div class="country-card" [routerLink]="['/detail', country.name.common]">
+            <img [src]="country.flags.png" [alt]="country.name.common"/> 
+            <div class="country-info">
+                <h4>{{ country.name.common }}</h4>
+                <p>{{ country.population | population}} habitantes</p>
+            </div>
+        </div>
+    }
+</div>

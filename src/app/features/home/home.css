@@ -1,0 +1,46 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    background: rgb(54, 53, 56);
+    border: 1px solid rgb(150, 145, 158);
+    border-radius: 12px;
+}
+
+input {
+    background: rgb(54, 53, 56);
+    border: 1px solid rgb(150, 145, 158);
+    border-radius: 4px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    padding-left: 8px;
+}
+
+.country-card{
+    border: 1px solid rgb(150, 145, 158);
+    border-radius: 8px;
+    padding: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 60px;
+    margin-bottom: 10px;
+    cursor: pointer;
+
+    img {
+        width: 80px;
+        height: 56px;
+        margin-right: 20px;
+    }
+
+    h4 {
+        margin: 0px;
+    }
+
+    p {
+        margin: 0px;
+        color: rgb(166, 159, 177);
+    }
+
+
+}

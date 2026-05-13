@@ -1,0 +1,27 @@
+<div class="container">
+    <a [routerLink]="['/']">← Países</a>
+    @if (country()) {
+        <div class="country-container">
+            <img [src]="country()?.flags?.png" alt={{country()?.name?.common}} />
+            <h1>{{country()?.name?.official}}</h1>
+        </div>
+        <div class="card">
+            <p>Capital</p>
+            <p>{{ country()?.capital }}</p>
+        </div>
+        <div class="card">
+            <p>População</p>
+            <p>{{ country()?.population }}</p>
+        </div>
+        <div class="card">
+            <p>Região</p>
+            <p>{{ country()?.region }}</p>
+        </div>
+        <div class="card">
+            <p>Idioma</p>
+            <p>{{ getLanguages() }}</p>
+        </div>
+    } @else {
+        <p>Carregando...</p>
+    }
+</div>
