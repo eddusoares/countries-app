@@ -2,10 +2,11 @@ import { Component, inject, signal } from '@angular/core';
 import { Countries } from '../../core/services/countries';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { Country } from '../../core/models/country.model';
+import { PopulationPipe } from '../../core/pipes/population-pipe';
 
 @Component({
   selector: 'app-detail',
-  imports: [RouterLink],
+  imports: [RouterLink, PopulationPipe],
   templateUrl: './detail.html',
   styleUrl: './detail.css',
 })
